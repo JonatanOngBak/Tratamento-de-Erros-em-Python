@@ -3,7 +3,7 @@
 from lib.interface import *
 
 while True:
-    resposta = menu(['Criar Arquivo', 'Cadastrar Pessoa', 'Listar Pessoa', 'Sair do Sistema'])
+    resposta = menu(['Ver pessoas cadastradas', 'Cadastrar nova Pessoa', 'Sair do Sistema'])
     if resposta == 1:
         print('Opção 1')
     elif resposta == 2:
