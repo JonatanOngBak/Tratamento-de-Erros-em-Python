@@ -15,10 +15,15 @@ while True:
         # opcão de listar o conteudo de um arquivo!
         lerAquivo(arq)
     elif resposta == 2:
-        cabeçalho('Opção 2')
+        # opção para cadastra uma nova pessoa.
+        cabeçalho('NOVO CADASTRO')
+        nome = str(input('Nome: '))
+        idade = leiaInt('Idade: ')
+        cadastrar(arq, nome, idade)
     elif resposta == 3:
         cabeçalho('Saindo do sistema... Até logo!')
         break
     else:
         print('\033[31mERRO! Digite uma opção válida!\033[m') 
     sleep(2)
+

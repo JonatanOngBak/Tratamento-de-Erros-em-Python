@@ -27,4 +27,21 @@ def lerAquivo(nome):
     else:
         cabeçalho('PESSOAS CADASTRADAS')
         print(a.read())
+    finally:
+        a.close()    
+
+
+def cadastrar(arq, nome='Desconhecido', idade=0):
+    try:
+        a = open(arq, 'at')
+    except:
+        print('Houve um erro na abertura do arquivo!')
+    else:
+        try:
+            a.write(f'{nome}; {idade}\n')
+        except:
+            print('Houve um erro na hora de escrever os dados!')
+        else:
+            print(f'Novo resistro de {nome} adicionado.')            
+
                                 
