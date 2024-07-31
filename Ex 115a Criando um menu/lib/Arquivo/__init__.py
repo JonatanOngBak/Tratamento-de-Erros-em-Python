@@ -26,7 +26,11 @@ def lerAquivo(nome):
         print('Erro ao ler o arquivo!')
     else:
         cabeçalho('PESSOAS CADASTRADAS')
-        print(a.read())
+        for linha in a:
+            dado = linha.split(';')
+            dado[1] = dado[1].replace('\n', '')
+            print(f'{dado[0]:<30}{dado[1]:>3} Anos')
+
     finally:
         a.close()    
 
@@ -42,6 +46,7 @@ def cadastrar(arq, nome='Desconhecido', idade=0):
         except:
             print('Houve um erro na hora de escrever os dados!')
         else:
-            print(f'Novo resistro de {nome} adicionado.')            
+            print(f'Novo resistro de {nome} adicionado.') 
+            a.close()           
 
                                 

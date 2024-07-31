@@ -1,5 +1,0 @@
-Gustavo; 41
-Jonatan: 35
-Paulo; 44
-Jose; 22
-Cris; 65
